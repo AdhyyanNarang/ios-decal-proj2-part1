@@ -53,4 +53,8 @@ class ImagePickerController: UIViewController, UICollectionViewDataSource, UICol
         let selectedCell = collectionView.cellForItem(at: indexPath) as! imageCollectionVieCell
         selectImage(selectedCell.image.image!)
     }
+    
+    
+    @IBAction func unwindToimagePickerViewController(segue: UIStoryboardSegue) {
+    }
 }

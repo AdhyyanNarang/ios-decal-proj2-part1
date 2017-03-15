@@ -43,7 +43,8 @@ class ImageFeedViewController: UIViewController, UITableViewDelegate, UITableVie
         let requiredSnap = threads[threadNames[sectionNumber]]![rowNumber]
         cell.nameLabel.text = requiredSnap.name
         cell.readImage.image = requiredSnap.readImage
-        cell.timeLabel.text = "1 Minute Ago"
+        let minutes = -(requiredSnap.timeStamp?.timeIntervalSinceNow)!/60
+        cell.timeLabel.text = String(Int(round(minutes))) + " minutes ago"
         return cell
     }
     

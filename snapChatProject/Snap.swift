@@ -11,11 +11,11 @@ import UIKit
 class Snap: NSObject {
     var name: String?
     var image: UIImage?
-    var timeStamp: Timer?
+    var timeStamp: Date?
     var readImage: UIImage
     var hasRead: Bool
     
-    init(name: String, image: UIImage, timeStamp: Timer) {
+    init(name: String, image: UIImage, timeStamp: Date) {
         self.name = name
         self.image = image
         self.timeStamp = timeStamp

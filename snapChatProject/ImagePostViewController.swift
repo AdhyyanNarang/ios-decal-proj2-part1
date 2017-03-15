@@ -22,7 +22,7 @@ class ImagePostViewController: UIViewController, UITableViewDataSource, UITableV
         super.viewDidLoad()
         let image: UIImage = #imageLiteral(resourceName: "goButton")
         goButton.setImage(image, for: .normal)
-        selectedLabel.text = "Posting to" + threadNames[0]
+        selectedLabel.text = "Posting to " + threadNames[0]
         categoryTableView.delegate = self;
         categoryTableView.dataSource = self;
     }
@@ -53,7 +53,8 @@ class ImagePostViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     @IBAction func clickPost(_ sender: Any) {
-        let snapToAdd = Snap(name: "Adhyyan Narang", image: pickedImage!, timeStamp: Timer())
+        let dateObj = Date()
+        let snapToAdd = Snap(name: "Adhyyan Narang", image: pickedImage!, timeStamp: dateObj)
         threads[threadNames[selectedRow]]!.append(snapToAdd)
         performSegue(withIdentifier: "postToImagePicker", sender: self)
         let notificationAlert = UIAlertController(title: "Snap Sent", message: "Your snap has been sent!", preferredStyle: UIAlertControllerStyle.alert)

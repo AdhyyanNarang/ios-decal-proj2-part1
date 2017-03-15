@@ -66,17 +66,19 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7us-da-eAx">
-                                <rect key="frame" x="39" y="580" width="70" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7us-da-eAx">
+                                <rect key="frame" x="39" y="555" width="80" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="1a0-i3-IHz"/>
+                                    <constraint firstAttribute="height" constant="50" id="OKK-87-Kai"/>
+                                </constraints>
                                 <state key="normal" title="Go Button"/>
                                 <connections>
                                     <action selector="clickPost:" destination="cg6-km-xym" eventType="touchUpInside" id="Wsk-pe-chq"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selected  category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTQ-UM-4KN">
-                                <rect key="frame" x="149" y="549" width="210" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected  category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTQ-UM-4KN">
+                                <rect key="frame" x="215" y="570" width="144" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -84,8 +86,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="o4v-10-Ip2" firstAttribute="top" secondItem="7us-da-eAx" secondAttribute="bottom" constant="62" id="8gb-sp-hL8"/>
                             <constraint firstAttribute="trailing" secondItem="l7j-PY-2dK" secondAttribute="trailing" id="Dhc-qh-Tmw"/>
+                            <constraint firstItem="YTQ-UM-4KN" firstAttribute="trailing" secondItem="e3X-P8-KSS" secondAttribute="trailingMargin" id="Jsg-39-7Ny"/>
                             <constraint firstAttribute="bottom" secondItem="l7j-PY-2dK" secondAttribute="bottom" id="XNp-Ji-naH"/>
+                            <constraint firstItem="YTQ-UM-4KN" firstAttribute="centerY" secondItem="7us-da-eAx" secondAttribute="centerY" id="hmI-AO-d4J"/>
+                            <constraint firstItem="7us-da-eAx" firstAttribute="leading" secondItem="e3X-P8-KSS" secondAttribute="leadingMargin" constant="23" id="ie2-oJ-A8e"/>
                             <constraint firstItem="l7j-PY-2dK" firstAttribute="leading" secondItem="e3X-P8-KSS" secondAttribute="leading" id="kaq-dn-KlA"/>
                             <constraint firstItem="l7j-PY-2dK" firstAttribute="top" secondItem="e3X-P8-KSS" secondAttribute="top" id="rRH-kl-cSJ"/>
                         </constraints>
@@ -114,9 +120,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="91" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ET9-M9-OiR">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="91" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ET9-M9-OiR">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="snapCell" rowHeight="91" id="fbX-Vy-pqC" customClass="SnapTableViewCell" customModule="snapChatProject" customModuleProvider="target">
@@ -138,7 +143,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time Stamp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdP-CH-gLr">
-                                                    <rect key="frame" x="124" y="61" width="92" height="21"/>
+                                                    <rect key="frame" x="124" y="61" width="220" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -156,6 +161,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ET9-M9-OiR" secondAttribute="trailing" id="7ri-2l-Jjd"/>
+                            <constraint firstAttribute="bottom" secondItem="ET9-M9-OiR" secondAttribute="bottom" id="ZIf-m9-o9o"/>
+                            <constraint firstItem="ET9-M9-OiR" firstAttribute="top" secondItem="67J-t5-xij" secondAttribute="top" id="jy5-ZB-bj0"/>
+                            <constraint firstItem="ET9-M9-OiR" firstAttribute="leading" secondItem="67J-t5-xij" secondAttribute="leading" id="w0J-Ci-XUA"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wkV-8X-zc2"/>
                     <connections>
@@ -165,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cyH-2p-Z6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="289" y="411"/>
+            <point key="canvasLocation" x="288.80000000000001" y="410.64467766116945"/>
         </scene>
         <!--Snap See View Controller-->
         <scene sceneID="iJf-Bi-nj6">
