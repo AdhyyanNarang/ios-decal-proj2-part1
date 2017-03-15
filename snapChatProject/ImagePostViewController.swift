@@ -56,6 +56,9 @@ class ImagePostViewController: UIViewController, UITableViewDataSource, UITableV
         let snapToAdd = Snap(name: "Adhyyan Narang", image: pickedImage!, timeStamp: Timer())
         threads[threadNames[selectedRow]]!.append(snapToAdd)
         performSegue(withIdentifier: "postToImagePicker", sender: self)
+        let notificationAlert = UIAlertController(title: "Snap Sent", message: "Your snap has been sent!", preferredStyle: UIAlertControllerStyle.alert)
+        notificationAlert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
+        self.present(notificationAlert, animated: true, completion: nil)
     }
     
     

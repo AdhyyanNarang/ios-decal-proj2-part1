@@ -185,6 +185,7 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="clickImage:" destination="AYR-2h-3pv" eventType="touchUpInside" id="ksb-d4-Y9B"/>
+                                    <segue destination="nng-jM-flg" kind="unwind" unwindAction="unwindToRootViewControllerWithSegue:" id="BXz-pk-MHz"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xgl-im-S07">
@@ -204,6 +205,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvY-uY-tqb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="nng-jM-flg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1092" y="409.7451274362819"/>
         </scene>

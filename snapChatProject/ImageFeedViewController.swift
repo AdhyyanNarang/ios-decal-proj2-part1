@@ -28,9 +28,12 @@ class ImageFeedViewController: UIViewController, UITableViewDelegate, UITableVie
         return threadNames.count
     }
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return threads[threadNames[section]]!.count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return threadNames[section]
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -61,9 +64,12 @@ class ImageFeedViewController: UIViewController, UITableViewDelegate, UITableVie
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "feedToSnap" {
             if let destinationVC = segue.destination as? SnapSeeViewController{
-                destinationVC.outputImage?.image = selectedSnap
+                destinationVC.imageShow = selectedSnap
             }
         }
+    }
+    
+    @IBAction func unwindToRootViewController(segue: UIStoryboardSegue) {
     }
     
     /*

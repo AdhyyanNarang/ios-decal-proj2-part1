@@ -11,9 +11,11 @@ import UIKit
 class SnapSeeViewController: UIViewController {
 
     @IBOutlet weak var outputImage: UIImageView?
+    var imageShow: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        outputImage?.image = imageShow
         // Do any additional setup after loading the view.
     }
 
@@ -22,9 +24,9 @@ class SnapSeeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     @IBAction func clickImage(_ sender: Any) {
-    }
+            }
+    
     /*
     // MARK: - Navigation
 
